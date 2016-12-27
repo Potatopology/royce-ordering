@@ -9,30 +9,58 @@
 </head>
 <body>
 	<center>
+	<form action="#">
 		<table>
 			<tr>
 				<td colspan = "4" align="center"><h2>ORDERING SYSTEM</h2></td>
 			</tr>
 			<tr>
-				<td colspan = "4" align="center"><b>Name of Customer: <b/><input type ="text" name="name"></td>
+				<td colspan = "4" align="center">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="name" name="name">
+						<label class="mdl-textfield__label" for="sample3">Name</label>
+					</div>
+				</td>
 			</tr>
 			<tr>
-				<td colspan = "4" align="center"><b>Address: <b/><input type ="text" size = "25" name="address"></td>
+				<td colspan = "4" align="center">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="address" name="address">
+						<label class="mdl-textfield__label" for="sample3">Address</label>
+					</div>
+				</td>
 			</tr>
 			<tr>
-				<td colspan = "4" align="center"><b>Contact No.: <b/><input type ="text" name="contact"></td>
+				<td colspan = "4" align="center">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact" name="contact">
+						<label class="mdl-textfield__label" for="sample4">Contact #</label>
+						<span class="mdl-textfield__error">Input is not a number!</span>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td colspan = "5" align="center"><b>Discount:</b>
-				<input type = "radio" name = "radio" value = "Regular" checked> Regular 
-				<input type = "radio" name = "radio" value = "discounted"> 10% Discount
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+					<input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+					<span class="mdl-radio__label">Regular</span>
+				</label>
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+					<input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+					<span class="mdl-radio__label">10% Discount</span>
+				</label>
 			</tr>
 			<tr>
 				<td colspan = "4" align="center"><h2><br>MENU FOR TODAY</h2></td>
 			</tr>
 			<tr>
-				<td><img src = "images/spag.jpg" width="200" height="300"><h2>Php250</h2>
-				<input type = "checkbox" name = "spag" value = "spag">SPAGHETTI<br>
+				<td><img src = "images/spag.jpg" width="150" height="200"><h2>Php250</h2>
+
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+					<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+					<span class="mdl-checkbox__label">SPAGHETTI</span>
+				</label>
+
 				<b>Quantity:</b><select id="qty" name="qty">
 				<option></option>
 				   <option value="250">1</option>
@@ -40,19 +68,36 @@
 				   <option value="250">3</option>
 				   <option value="250">4</option>
 				   <option value="250">5</option>
-				<td><img src = "images/carbonara.jpg" width="200" height="300"><h2>Php280</h2>
-				<input type = "checkbox" name = "carbo" value = "carbo">CARBONARA</td>
-				<td><img src = "images/lasagna.jpg" width="200" height="300"><h2>Php300</h2>
-				<input type = "checkbox" name = "lasgna" value = "lasgna">LASAGNA</td>
-				<td><img src = "images/pesto.jpg" width="200" height="300"><h2>Php330</h2>
-				<input type = "checkbox" name = "pesto" value = "pesto">PESTO</td>
+
+				<td><img src = "images/carbonara.jpg" width="150" height="200"><h2>Php280</h2>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+					<input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">CARBONARA</span>
+				</label>
+
+				<td><img src = "images/lasagna.jpg" width="150" height="200"><h2>Php300</h2>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+					<input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">LASAGNA</span>
+				</label>
+
+				<td><img src = "images/pesto.jpg" width="150" height="200"><h2>Php330</h2>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+					<input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">PESTO</span>
+				</label>
 			</tr>
 			<tr>
-				<td colspan = "5" align="center"><input type="Submit" value="ORDER NOW!"></td>
+				<td colspan = "5" align="center">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+						Order Now
+					</button>
+				</td>
 			</tr>
 		</table>
+	</form>
 	</center>
-
+	
 
 
 	<!-- javascript -->
